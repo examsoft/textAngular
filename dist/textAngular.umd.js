@@ -1032,7 +1032,7 @@ angular.module('textAngularSetup', [])
 @license textAngular
 Author : Austin Anderson
 License : 2013 MIT
-Version 1.5.17-es-rc1
+Version 1.5.17-es-rc2
 
 See README.md or https://github.com/fraywing/textAngular/wiki for requirements and use.
 */
@@ -1454,7 +1454,7 @@ angular.module('textAngular.factories', [])
     // use precompiled regexp for speed
     var rsb1 = new RegExp(/<span id="selectionBoundary_\d+_\d+" class="rangySelectionBoundary">[^<>]+?<\/span>/ig);
     var rsb2 = new RegExp(/<span class="rangySelectionBoundary" id="selectionBoundary_\d+_\d+">[^<>]+?<\/span>/ig);
-    var rsb3 = new RegExp(/<span id="selectionBoundary_\d+_\d+" class="rangySelectionBoundary".*?>[^<>]+?<\/span>/ig);
+    var rsb3 = new RegExp(/<span id="selectionBoundary_\d+_\d+".*?class="rangySelectionBoundary".*?>[^<>]+?<\/span>/ig);
 
     return function taSanitize(unsafe, oldsafe, ignore){
         // unsafe html should NEVER built into a DOM object via angular.element. This allows XSS to be inserted and run.
